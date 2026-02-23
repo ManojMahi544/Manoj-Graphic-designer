@@ -19,11 +19,15 @@
   <header class="navbar">
     <div class="logo">Manoj.</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <a href="#home">Home</a>
+  <a href="#work">Work</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="https://www.behance.net/sangatimanoj" target="_blank" style="color: #0052FF; font-weight: bold;">Behance</a>
+  <a href="https://wa.me/917396570511" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-family: 'Poppins', sans-serif; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); z-index: 1000;">
+  💬 Chat on WhatsApp
+</a>
+</nav>
   </header>
 
   <!-- Hero -->
@@ -90,7 +94,7 @@
 
   document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
-    emailjs.sendForm("service_c99s7ua", "Ytemplate_6w0wgmqATE_ID", this)
+    emailjs.sendForm("service_c99s7ua", "template_6w0wgmq", this)
       .then(() => {
         document.getElementById("form-status").innerText = "Message sent successfully!";
         this.reset();
