@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manoj | Graphic Designer Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Manoj.</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I’m Manoj 👋</h1>
+      <p>Graphic Designer & Packaging Designer (5+ Years Experience)</p>
+      <a href="#work" class="btn">View My Work</a>
+    <div class="grid">
+     <div class="card">Dental Clinic Logo & Branding</div>
+     <div class="card">Food Packaging Design</div>
+     <div class="card">Social Media Campaign Creatives</div>
+     <div class="card">Poster Design for Events</div>
+     <div class="card">UI Design for Mobile App</div>
+     <div class="card">Business Card & Stationery</div>
+</div>
+    <img src="assets/hero.jpg" alt="Manoj Portfolio">
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="work">
+    <h2>My Work</h2>
+    <div class="grid">
+      <div class="card">Logo Design</div>
+      <div class="card">Branding</div>
+      <div class="card">Social Media</div>
+      <div class="card">Packaging</div>
+      <div class="card">Posters</div>
+      <div class="card">UI Design</div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate Graphic Designer with 5+ years of experience creating 
+      impactful visuals for brands, startups, and businesses.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
+
+  <footer>
+    © 2026 Manoj – Graphic Designer
+  </footer>
+
+  <!-- Email script -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("fZr2SO8tqHa4N8XaG"); 
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    emailjs.sendForm("service_c99s7ua", "Ytemplate_6w0wgmqATE_ID", this)
+      .then(() => {
+        document.getElementById("form-status").innerText = "Message sent successfully!";
+        this.reset();
+      }, () => {
+        document.getElementById("form-status").innerText = "Failed to send message.";
+      });
+  });
+</script>
+
+</body>
+</html>
